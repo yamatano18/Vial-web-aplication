@@ -1,0 +1,75 @@
+<!DOCTYPE HTML>
+<html lang="pl">
+<head>
+    <meta charset="utf-8"/>
+    <title>Strona główna</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <link rel="stylesheet" href="https://od.iem.pw.edu.pl:2552/static/styles/style.css" type="text/css"/>
+    <link rel="stylesheet" href="https://od.iem.pw.edu.pl:2552/static/styles/menu.css" type="text/css"/>
+</head>
+<body>
+<div id="topmenu">
+    <a href="/">
+        <div class="bar">Strona glowna</div>
+    </a>
+    <a href="/signin">
+        <div class="bar">Zaloguj sie</div>
+    </a>
+    <a href="/register">
+        <div class="bar">Stworz konto</div>
+    </a>
+    <a href="/addsnippet">
+        <div class="bar">Dodaj snippet</div>
+    </a>
+    <a href="/logout">
+        <div class="bar">Wyloguj sie</div>
+    </a>
+    <div style="clear: both;"></div>
+</div>
+<div id="container">
+    <div>{{message}}</div>
+    <h1>Recent post</h1>
+    <div>
+        <table cellpadding="0" cellspacing="0" border="0">
+            <thead>
+            <tr>
+                <th>Name</th>
+                <th>Author</th>
+                <th>Date</th>
+            </tr>
+            </thead>
+        </table>
+    </div>
+    <div>
+        <table cellpadding="0" cellspacing="0" border="0">
+            <tbody>
+            {% for row in snippets_values %}
+            <tr>
+                <td><a href="https://od.iem.pw.edu.pl:2552/view/{{row['title']}}">{{ row['title'] }}</a></td>
+                <td>{{ row['login']| e }}</td>
+                <td>{{ row['date'] | e }}</td>
+            </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+headers
+<br>
+{{ headers }}
+<br>
+body
+<br>
+{{ body }}
+<br>
+data
+<br>
+{{ data }}
+snippet_values
+<br>
+{{ snippet_values }}
+snippets
+<br>
+{{ snippets }}
+</body>
+</html>

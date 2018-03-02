@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>Wgraj plik</title>
+    <link rel="stylesheet" href="https://od.iem.pw.edu.pl:2552/static/styles/menu.css" type="text/css"/>
+    <link rel="stylesheet" href="https://od.iem.pw.edu.pl:2552/static/styles/style.css" type="text/css"/>
+</head>
+<body>
+<div id="topmenu">
+    <a href="/home">
+        <div class="bar">Strona glowna</div>
+    </a>
+    <a href="/signin">
+        <div class="bar">Zaloguj sie</div>
+    </a>
+    <a href="/register">
+        <div class="bar">Stworz konto</div>
+    </a>
+    <a href="/logout">
+        <div class="bar">Wyloguj sie</div>
+    </a>
+    <div style="clear: both;"></div>
+</div>
+<div id="container">
+    <div id="info">
+        {{ message }}
+    </div>
+    <form action="upload.php" method="post" enctype="multipart/form-data">
+        Select image to upload:
+        <input type="file" name="fileToUpload" id="fileToUpload">
+        <input type="submit" value="Upload Image" name="submit">
+    </form>
+</div>
+headers
+<br>
+{{ headers }}
+<br>
+body
+<br>
+{{ body }}
+<br>
+data
+<br>
+{{ data }}
+</body>
+</html>

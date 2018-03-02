@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>Rejestracja</title>
+    <link rel="stylesheet" href="https://od.iem.pw.edu.pl:2552/static/styles/form.css" type="text/css"/>
+    <link rel="stylesheet" href="https://od.iem.pw.edu.pl:2552/static/styles/menu.css" type="text/css"/>
+</head>
+<body>
+<div id="topmenu">
+    <a href="/home">
+        <div class="bar">Strona glowna</div>
+    </a>
+    <a href="/signin">
+        <div class="bar">Zaloguj sie</div>
+    </a>
+    <a href="/register">
+        <div class="bar">Stworz konto</div>
+    </a>
+    <div style="clear: both;"></div>
+</div>
+<div id="container">
+    <div id="info">
+        {{ message }}
+    </div>
+    <form action="/register" method="post">
+        <input type="text" name="login" placeholder="LOGIN" onfocus="this.placeholder=''"
+               onblur="this.placeholder='LOGIN'">
+        <input type="password" name="password" placeholder="HASŁO" onfocus="this.placeholder=''"
+               onblur="this.placeholder='HASŁO'">
+        <input type="password" name="repassword" placeholder="POWTÓRZ HASŁO" onfocus="this.placeholder=''"
+               onblur="this.placeholder='POWTÓRZ HASŁO'">
+        <input type="submit" value="Rejestracja">
+    </form>
+</div>
+headers
+<br>
+{{ headers }}
+<br>
+body
+<br>
+{{ body }}
+<br>
+data
+<br>
+{{ data }}
+</body>
+</html>

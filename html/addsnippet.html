@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <title>Dodaj Snippet</title>
+    <link rel="stylesheet" href="https://od.iem.pw.edu.pl:2552/static/styles/snippet_add.css" type="text/css"/>
+    <link rel="stylesheet" href="https://od.iem.pw.edu.pl:2552/static/styles/style.css" type="text/css"/>
+    <link rel="stylesheet" href="https://od.iem.pw.edu.pl:2552/static/styles/menu.css" type="text/css"/>
+</head>
+<body>
+<div id="topmenu">
+    <a href="/home">
+        <div class="bar">Strona glowna</div>
+    </a>
+    <a href="/register">
+        <div class="bar">Stworz konto</div>
+    </a>
+    <a href="/logout">
+        <div class="bar">Wyloguj sie</div>
+    </a>
+    <div style="clear: both;"></div>
+</div>
+<div id="container">
+    <h1> Add snippet </h1>
+    <div id="info">{{ message }}</div>
+    <form action="/addsnippet" method="post">
+        <input type="text" name="title" placeholder="Nazwa snippet'u">
+        <br>
+        <label>
+            <textarea name="snippet"></textarea>
+        </label>
+        <br>
+        <input class="button" type ="submit" value="Przeslij">
+    </form>
+</div>
+</body>
+</html>

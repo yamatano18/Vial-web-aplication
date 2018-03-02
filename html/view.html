@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>Snippet</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <link rel="stylesheet" href="https://od.iem.pw.edu.pl:2552/static/styles/style.css" type="text/css"/>
+    <link rel="stylesheet" href="https://od.iem.pw.edu.pl:2552/static/styles/menu.css" type="text/css"/>
+</head>
+<body>
+<div id="topmenu">
+    <a href="/home">
+        <div class="bar">Strona glowna</div>
+    </a>
+    <a href="/signin">
+        <div class="bar">Zaloguj sie</div>
+    </a>
+    <a href="/register">
+        <div class="bar">Stworz konto</div>
+    </a>
+    <a href="/logout">
+        <div class="bar">Wyloguj sie</div>
+    </a>
+    <div style="clear: both;"></div>
+</div>
+<div id="container">
+    <h1>Snippet {{ snippet_title }}</h1>
+    <div id="message">{{ message }}</div>
+    <iframe src="https://od.iem.pw.edu.pl:2552/static/snippets/{{ snippet_title }}">
+        <p>Your browser does not support iframes.</p>
+    </iframe>
+</div>
+</body>
+</html>
